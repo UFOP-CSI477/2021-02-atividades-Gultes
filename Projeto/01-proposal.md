@@ -22,7 +22,7 @@
   
   Com relação aos usuários: irá constar a função de cadastrar um usuário, com dados pessoais e foto de perfil, além de poder alterar esses dados. Também será possível realizar a desativação da conta.
   
-	Quanto ao lançamentos de Ativos: Será possível realizar o lançamento dos ativos financeiros de modo organizado e simplificado, isto é, valor em reais ou moeda estrangeira presente em bancos tradicionais, fintechs, carteiras físicas e outros. Os valores dos lançamentos serão baseados no mês corrente.
+  Quanto ao lançamentos de Ativos: Será possível realizar o lançamento dos ativos financeiros de modo organizado e simplificado, isto é, valor em reais ou moeda estrangeira presente em bancos tradicionais, fintechs, carteiras físicas e outros. Os valores dos lançamentos serão baseados no mês corrente.
 
   Quanto ao lançamento de Receitas: O lançamento de receitas poderá ser feito com flexibilidade, ou seja, a qualquer momento, sendo que deverá ser indicado, quando houver, o valor destinado a compor os ativos, ou seja, fatia a ser poupada em um dos locais de guarda de ativos.
   
