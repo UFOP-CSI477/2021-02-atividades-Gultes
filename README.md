@@ -10,4 +10,4 @@
 
 ## [Projeto final:](./Projeto/README.md)
 
-Simple Financas é um sistema web a ser utilizado para controle de finanças pessoais (Receita/Despesa) de maneira descomplicada, além de possuir detalhamento para carteira de investimentos, separando investimentos de renda variável e renda fixa.
+Simple Financas é um sistema web a ser utilizado para controle de finanças pessoais (Receita/Despesa), de maneira descomplicada a aplicação irá exibir as despesas lançadas no mês (fixas e variáveis), assim como as receitas, além de apresentar um saldo da conta do usuario e a possibilidade de visualização da situação do próximo mês considerando apenas com as despesas fixas, além disso o sistema terá um resumo da carteira de investimentos do usuário, separando investimentos de renda fixa e de renda variável.
