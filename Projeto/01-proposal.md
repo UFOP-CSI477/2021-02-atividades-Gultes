@@ -1,6 +1,6 @@
 # **CSI606-2021-02 - Remoto - Proposta de Trabalho Final**
 
-## *Aluna(o): Princesa Leia (Luke Skywalker)*
+## *Aluna(o): Gustavo Estevam Sena*
 
 --------------
 
@@ -8,7 +8,7 @@
 
 ### Resumo
 
-  (Apresentar um breve resumo sobre o seu trabalho, indicando o contexto e as principais funcionalidades.)
+  Simple Financas é um sistema web a ser utilizado para controle de finanças pessoais (Receita/Despesa), de maneira descomplicada a aplicação irá exibir as despesas lançadas no mês (fixas e variáveis), assim como as receitas, além de apresentar um saldo da conta do usuario e a possibilidade de visualização da situação do próximo mês considerando apenas com as despesas fixas, além disso o sistema terá um resumo da carteira de investimentos do usuário, separando investimentos de renda fixa e de renda variável.
 
 <!-- Apresentar o tema. -->
 ### 1. Tema
