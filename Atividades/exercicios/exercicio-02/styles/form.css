@@ -1,0 +1,37 @@
+form {
+  width: auto;
+  height: auto;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+form > div {
+  padding: 10px;
+  border: 1px solid blue;
+  margin: 10px 5px;
+}
+
+label {
+  padding: 4px;
+  font-size: 18px;
+}
+
+input {
+  padding: 4px;
+  font-size: 18px;
+  align-self: center;
+}
+
+input[type="text"] {
+  width: auto;
+}
+
+input:hover {
+  background-color: pink;
+}
+
+div.radio {
+  display: flex;
+  align-items: center;
+}
