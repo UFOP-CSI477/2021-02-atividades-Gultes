@@ -1,0 +1,50 @@
+body {
+    height: 500vh;
+    width: 100vw;
+    overflow: visible;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-entries {
+    width: 80%;
+    height: fit-content;
+    max-height: 90vh;
+    margin: 25px auto 0;
+    overflow: auto;
+}
+
+.card {
+    margin: 25px;
+}
+
+.type-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-check {
+    margin: 0 25px;
+}
+
+.mb-3 {
+    margin-top: 15px;
+}
+
+.element {
+    margin: 5px;
+    border-radius: 8px;
+    padding: 5px;
+    color: #fff;
+}
+
+.total-received,
+.total-invited {
+    font-weight: bold;
+    margin-top: 15px;
+    transform: scale(1.1);
+}
