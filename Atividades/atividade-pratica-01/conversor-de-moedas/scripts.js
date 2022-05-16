@@ -64,7 +64,7 @@ async function getGraph(from, to) {
     labels: labels,
     datasets: [
       {
-        label: `Contação do nos ultimos 7 dias`,
+        label: `Cotação da Última Semana`,
         data: response.map((item) => item.high).reverse(),
         fill: false,
         borderColor: "rgb(75, 192, 192)",
