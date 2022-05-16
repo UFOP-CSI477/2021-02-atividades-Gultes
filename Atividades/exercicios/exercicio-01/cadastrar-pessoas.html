@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./styles/global.css" />
+      <link rel="stylesheet" href="./styles/form.css" />
+    </head>
+    <title>Cadastrar Pessoas</title>
+  </head>
+  <body>
+    <header class="navbar-home">
+        <h2>Sistemas de Banco de Dados Web </h2>
+        <p>Este é um curso de <strong>Introdução a Programação Web</strong></p>
+    <form action="/exercicio-01/listar-pessoas.html" name="dados" method="get">
+      <div>
+        <label for="name">Nome</label>
+        <input
+          placeholder="Informe seu Nome"
+          id="name"
+          type="text"
+          name="name"
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input
+          placeholder="Informe o seu Email"
+          id="email"
+          type="string"
+          name="email"
+        />
+      </div>
+      <div>
+        <label for="telefone">Telefone</label>
+        <input
+          placeholder="Informe o seu Telefone"
+          id="telefone"
+          type="string"
+          name="tel"
+        />
+      </div>
+      <div>
+        <label for="turma">Turma</label>
+        <input
+          placeholder="Informe seu curso e periodo"
+          id="turma"
+          type="string"
+          name="turma"
+        />
+      </div>
+      <div>
+        <label for="end">Endereco</label>
+        <input
+          placeholder="Informe o seu Endereco"
+          id="Endereco"
+          type="string"
+          name="endereco"
+        />
+      </div>
+      
+      <p>------------------------------------------------------------</p>
+      <div>
+        <label>Genero</label>
+        <div class="radio">
+          <input type="radio" id="masc" name="gender" value="masc" />
+          <label for="masc">Homem</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="fem" name="gender" value="fem" />
+          <label for="fem">Mulher</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Outro</label>
+        </div>
+        <div class="radio">
+          <input type="radio" id="not" name="gender" value="not" />
+          <label for="not">Outro</label>
+        </div>
+      </div>
+      <p>------------------------------------------------------------</p>
+      <div>
+        <label for="">Áreas de interesse:</label>
+        <div>
+          <input type="checkbox" id="web" name="area[0]" /><label for="web"
+            >Sistemas Web</label
+          >
+        </div>
+        <div>
+          <input type="checkbox" id="so" name="area[1]" /><label for="so"
+            >Sistemas Operacionais</label
+          >
+        </div>
+        <div>
+          <input type="checkbox" id="Banco" name="area[2]" /><label for="Banco"
+            >Banco de Dados</label
+          >
+        </div>
+      </div>
+      <p>------------------------------------------------------------</p>
+      <input type="submit" value="Cadastrar" />
+      <input type="reset" value="Limpar">
+    </form>
+  </body>
+</html>
