@@ -20,11 +20,6 @@ h2 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-div.info {
-    font-size: 18pt;
-    color: #9f48e6;     
- }
-
 a, input[type="submit"], input[type="reset"] {
     color: #ffffff;
     background-color: rgb(63, 132, 197);
