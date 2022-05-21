@@ -1,0 +1,27 @@
+.input-group {
+    width: 30vw;
+    display: flex;
+    margin: 10px auto;
+  }
+  
+  .form-select {
+    width: 70%;
+  }
+  
+  .input-group-text {
+    width: 30%;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 20px auto;
+  }
+  
+  .chart {
+    width: 25vw;
+    margin: 0 auto;
+    height: 80px !important;
+  }
+  

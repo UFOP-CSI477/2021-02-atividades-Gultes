@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor de Moedas</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <h1>Conversor de Moedas</h1>
+  <body>
+    <div class="wrapper">
+      <input type="number" class="form-control" placeholder="Valor" />
+      <div class="input-group">
+        <span class="input-group-text">De</span>
+        <select class="form-select" id="select-1">
+          <option value="BRL" selected>Reais</option>
+          <option value="USD">Dólares</option>
+          <option value="EUR">Euros</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <span class="input-group-text">Para</span>
+        <select class="form-select" id="select-2">
+          <option value="USD" selected>Dólares</option>
+          <option value="EUR">Euros</option>
+          <option value="BRL">Reais</option>
+        </select>
+      </div>
+      <button class="btn btn-primary" id="btn-converter">Converter</button>
+    </div>
+    <div class="result">
+      <p class="display-4 text-center mt-3 result-p"></p>
+    </div>
+    <div class="chart">
+      <canvas id="myChart" width="100" height="100"></canvas>
+    </div>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+      integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="./scripts.js"></script>
+  </body>
+</html>
