@@ -84,10 +84,10 @@ function SettingsProvider({ children }: SettingsProviderProps) {
     });
   };
 
-  const onChangeMode = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeMode = (themeMode?: any) => {
     setSettings({
       ...settings,
-      themeMode: (event.target as HTMLInputElement).value as ThemeMode,
+      themeMode: themeMode,
     });
   };
 
@@ -123,10 +123,10 @@ function SettingsProvider({ children }: SettingsProviderProps) {
     });
   };
 
-  const onChangeLayout = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChangeLayout = (themeMode: any) => {
     setSettings({
       ...settings,
-      themeLayout: 'vertical',
+      themeLayout: themeMode,
     });
   };
 

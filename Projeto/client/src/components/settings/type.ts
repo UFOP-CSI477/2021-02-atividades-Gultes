@@ -41,7 +41,7 @@ export type SettingsContextProps = {
 
   // Mode
   onToggleMode: VoidFunction;
-  onChangeMode: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeMode: (themeMode?: any) => void;
 
   // Direction
   onToggleDirection: VoidFunction;
@@ -50,7 +50,7 @@ export type SettingsContextProps = {
 
   // Layout
   onToggleLayout: VoidFunction;
-  onChangeLayout: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeLayout: (themeMode?: any) => void;
 
   // Contrast
   onToggleContrast: VoidFunction;

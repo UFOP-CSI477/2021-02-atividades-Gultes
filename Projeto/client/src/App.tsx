@@ -6,18 +6,25 @@ import ThemeProvider from './theme';
 import ThemeSettings from './components/settings';
 import ScrollToTop from './components/ScrollToTop';
 import NotistackProvider from './components/NotistackProvider';
+import useSettings from './hooks/useSettings';
+import { useEffect } from 'react';
 
 // ----------------------------------------------------------------------
 
 export default function App() {
+  const { onChangeMode, onChangeLayout } = useSettings();
+
+  useEffect(() => {
+    onChangeMode('light');
+    onChangeLayout('vertical');
+  }, []);
+
   return (
     <ThemeProvider>
-      <ThemeSettings>
-        <NotistackProvider>
-          <ScrollToTop />
-          <Router />
-        </NotistackProvider>
-      </ThemeSettings>
+      <NotistackProvider>
+        <ScrollToTop />
+        <Router />
+      </NotistackProvider>
     </ThemeProvider>
   );
 }
