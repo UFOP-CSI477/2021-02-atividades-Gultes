@@ -23,6 +23,8 @@ Lançamento de Itens por Tipo: Receita, Despesa, Investimento;
 Edição, Exclusão e Pesquisa de itens;
 
 Exibição do Total (Receita - Despesa) na barra superior da tela, com atualização a cada lançamento;
+
+Persistência das informações lançadas pelo usuário logado após logar uma segunda vez. (SESSION_TOKEN)
   
 ### 2. Funcionalidades previstas e não implementadas
 
