@@ -1,6 +1,6 @@
 {
-  "name": "economia",
-  "author": "Gustavo Henrique",
+  "name": "simple-finance",
+  "author": "Gustavo Estevam",
   "version": "3.4.0",
   "description": "React Scripts & Typescript",
   "private": true,
