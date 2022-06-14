@@ -46,7 +46,16 @@ export default function Router() {
             </GuestGuard>
           ),
         },
+        {
+          path: 'register',
+          element: (
+            <GuestGuard>
+              <Register />
+            </GuestGuard>
+          ),
+        },
         { path: 'login-unprotected', element: <Login /> },
+        { path: 'register-unprotected', element: <Register /> },
       ],
     },
 
@@ -98,6 +107,7 @@ export default function Router() {
 
 // AUTHENTICATION
 const Login = Loadable(lazy(() => import('../pages/auth/Login')));
+const Register = Loadable(lazy(() => import('../pages/auth/Register')));
 
 const Page404 = Loadable(lazy(() => import('../pages/Page404')));
 

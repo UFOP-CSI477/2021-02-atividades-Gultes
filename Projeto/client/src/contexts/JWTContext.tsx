@@ -141,6 +141,25 @@ function AuthProvider({ children }: AuthProviderProps) {
     });
   };
 
+  const register = async (email: string, password: string, name: string, photo_url: string) => {
+    const response = await axios.post('/user', {
+      email,
+      password,
+      name,
+      photo_url,
+    });
+    const { accessToken, user } = response.data;
+
+    localStorage.setItem('accessToken', accessToken);
+
+    dispatch({
+      type: Types.Register,
+      payload: {
+        user,
+      },
+    });
+  };
+
   const logout = async () => {
     setSession(null);
     dispatch({ type: Types.Logout });
@@ -153,6 +172,7 @@ function AuthProvider({ children }: AuthProviderProps) {
         method: 'jwt',
         login,
         logout,
+        register,
       }}
     >
       {children}

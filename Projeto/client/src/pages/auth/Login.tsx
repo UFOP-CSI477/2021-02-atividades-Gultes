@@ -1,7 +1,17 @@
 // @mui
 import { styled } from '@mui/material/styles';
-import { Box, Card, Stack, Alert, Container, Typography, useTheme, alpha } from '@mui/material';
-
+import {
+  Box,
+  Card,
+  Stack,
+  Alert,
+  Link,
+  Container,
+  Typography,
+  useTheme,
+  alpha,
+} from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 // hooks
 import useAuth from '../../hooks/useAuth';
 import useResponsive from '../../hooks/useResponsive';
@@ -11,6 +21,7 @@ import Logo from '../../components/Logo';
 
 // sections
 import { LoginForm } from '../../sections/auth/login';
+import { PATH_AUTH } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 
@@ -47,6 +58,8 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function Login() {
   const { method } = useAuth();
 
+  const smUp = useResponsive('up', 'sm');
+
   const mdUp = useResponsive('up', 'md');
 
   const theme = useTheme();
@@ -71,6 +84,12 @@ export default function Login() {
               </Stack>
 
               <LoginForm />
+
+              <Typography variant="body2" align="center" sx={{ mt: 3 }}>
+                <Link variant="subtitle2" component={RouterLink} to={PATH_AUTH.register}>
+                  Criar uma conta
+                </Link>
+              </Typography>
             </Card>
           </ContentStyle>
         </Container>
