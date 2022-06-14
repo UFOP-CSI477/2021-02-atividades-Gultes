@@ -18,7 +18,7 @@ Back-End: NestJS, Prisma, NodeJS, BD: PostgreeSQL Autenticação: JWT Token
 
 Front-End: React + Typescript + Material UI
 
-1. Funcionalidades implementadas
+### Funcionalidades implementadas
 
 Criação e Login de usuário (usando e-mail e senha); 
 
