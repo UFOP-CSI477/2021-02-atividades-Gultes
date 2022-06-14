@@ -7,6 +7,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+enum transactionCategory {
+  DESPESA
+  RECEITA
+}
+
 model transaction {
   id String @id @default(uuid())
 
@@ -27,6 +32,6 @@ model user {
   password    String
   name        String
   photo_url   String?
-  active      Boolean       @default(true)
+  active      Boolean       @default(false)
   transaction transaction[]
 }
