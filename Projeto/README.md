@@ -1,6 +1,5 @@
 # **CSI606-2021-02 - Remoto - Trabalho Final**
-
-Este documento deverá ser substituído pela estrutura definida pelos modelos a seguir, conforme o andamento do trabalho:
+Para verificar o resultado deste trabalho acesse o item 2. Andamento/Resultados!
 
 1. [Proposta de trabalho](./01-proposal.md)
-1. [Andamento/resultados](./02-final-version.md)
+2. [Andamento/resultados](./02-final-version.md)

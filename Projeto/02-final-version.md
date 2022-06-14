@@ -1,61 +1,68 @@
-# **CSI606-2021-02 - Remoto - Proposta de Trabalho Final**
+# **CSI606-2021-02 - Remoto - Trabalho Final - Resultados**
 
 ## *Aluna(o): Gustavo Estevam Sena*
 
---------------
-
-<!-- Descrever um resumo sobre o trabalho. -->
-
 ### Resumo
 
-  Simple Financas é um sistema web a ser utilizado para controle de finanças pessoais (Ativos/Receita/Despesa) de maneira descomplicada, a aplicação irá exibir as despesas lançadas no mês (fixas e variáveis), assim como as receitas, além de apresentar um saldo mensal da conta do usuario e a visualização da previsão de gastos do próximo mês considerando apenas as despesas fixas, além disso, o sistema terá um resumo da carteira de investimentos do usuário, separando investimentos de renda fixa e de renda variável.
-
-<!-- Apresentar o tema. -->
-### 1. Tema
-
-  O trabalho final tem como tema o desenvolvimento de uma aplicação para Controle de Finanças Pessoais de maneira descomplicada.
-
-<!-- Descrever e limitar o escopo da aplicação. -->
-### 2. Escopo
-
-  Este projeto terá as seguintes funcionalidades:
+  Simple Finance é um sistema web a ser utilizado para controle de finanças pessoais (Investimentos/Receita/Despesa) de maneira descomplicada, a aplicação irá exibir as despesas lançadas no mês , assim como as receitas, além de apresentar um total mensal representando o saldo da conta do usuario (Receita - Despesa), além disso, o sistema terá um resumo da carteira de investimentos do usuário.
   
-  Com relação aos usuários: irá constar a função de cadastrar um usuário, com dados pessoais e foto de perfil, além de poder alterar esses dados. Também será possível realizar a desativação da conta.
+  Tecnologias utilizadas:
+
+  Back-End: NestJS, Prisma, NodeJS, 
+  BD: PostgreeSQL
+  Autenticação: JWT Token
+
+  Front-End: React + Typescript + Material UI
+
+### 1. Funcionalidades implementadas
+
+Criação e Login de usuário (usando e-mail e senha);
+Autenticação da senha do usuário no login;
+
+Lançamento de Itens por Tipo: Receita, Despesa, Investimento;
+
+Edição, Exclusão e Pesquisa de itens;
+
+Exibição do Total (Receita - Despesa) na barra superior da tela, assim como o Total do Valor Investido, com atualização a cada lançamento;
+
+Persistência das informações lançadas pelo usuário logado após logar uma segunda vez. (SESSION_TOKEN)
   
-  Quanto ao lançamentos de Ativos: Será possível realizar o lançamento dos ativos financeiros de modo organizado e simplificado, isto é, valor em reais ou moeda estrangeira presente em bancos tradicionais, fintechs, carteiras físicas e outros. Os valores dos lançamentos serão baseados no mês corrente.
+### 2. Funcionalidades previstas e não implementadas
 
-  Quanto ao lançamento de Receitas: O lançamento de receitas poderá ser feito com flexibilidade, ou seja, a qualquer momento, sendo que deverá ser indicado, quando houver, o valor destinado a compor os ativos, ou seja, fatia a ser poupada em um dos locais de guarda de ativos.
-  
-  Quanto ao lançamento de Despesas: Despesas fixas como: água, alimentação, luz, aluguel e internet terão uma separação visual de despesas variáveis, como, contas com vestuário. transporte, saúde, entre outros.
-  
-  Outras despesas também poderão ser lançadas, elas serão identificadas inicialmente como outras Despesas, podendo ser atribuidas por tags específicas de agrupamento.
 
-  Quanto ao lançamento de Investimentos: Será possível realizar o lançamento de valores referentes ao tesouro direto, ações e criptos, de forma separada e tendo a exibição vinculada ao mês corrente.
+### 3. Outras funcionalidades implementadas
 
-  Um resultado mensal com o total de (ativo - despesa [Saldo no Período])  será exibido próximo ao rodapé da tela e atualizado dinamicamente após um novo lançamento, também será exibida a previsão de gastos do mês seguinte.
+Inclusão de exibição de foto do usuário durante o login.
 
-  Por fim haverá uma função de controle de gastos e caso o usuário marque essa função, um percentual de gastos acima de X% de receita irá startar um alerta a ser enviado para o seu e-mail, esse alerta ocorrerá apenas no último dia do mês.
+### 4. Principais desafios e dificuldades
 
-<!-- Apresentar restrições de funcionalidades e de escopo. -->
-### 3. Restrições
+Houve dificuldade em trabalhar com manipulação de datas de lançamento no Front-end, por fim decidiu-se incluir apenas as datas dos lançamentos de itens como alternativa.
 
-  Neste trabalho não serão considerados:
-  
-  1.  Permissões avançadas de usuário, todo usuário terá acesso a todas as funções do sistema.
-  
-  2.  Personalização de layout por parte do usuário, salvo modo escuro.  
- 
-  2.	Atualização de dados de despesas de cartão de crédito ou boleto pago, inicialmente os lançamentos terão que ser 100% manual [Pode mudar se houver tempo].
+### 5. Instruções para instalação e execução
 
-  3.	Detalhamento gráfico de Gastos ( Função que normalmente mostra de maneira de forma gráfica o quanto foi gasto de acordo com as categorias utilizando barras ou outra tipologia)
+Back-end:
 
-  4.	Detalhamento de investimentos, como: Quantidade separada por tipo de tesouro, tipo de criptomoeda,  ou ações [Pode mudar se houver tempo].
+Criar um banco de dados (PostgreSQL, e executar o comando yarn:
 
-<!-- Construir alguns protótipos para a aplicação, disponibilizá-los no Github e descrever o que foi considerado. //-->
-### 4. Protótipo
+Criar um arquivo `.env` na raiz da pasta "server-side" com a sua string de conexão e informações necessárias para conectar ao banco, tal como disposto em env.example:
 
-  Protótipos para a página de login, página de lançamento de ativos/receitas/despesas foram elaborados via Figma e poderão ser visualizados em: https://bit.ly/SimpleFinancas
+JWT_SECRET=
+DATABASE_URL=
+PORT=3333
 
-### 5. Referências
+Executar o camando:
 
-  Mobills Finanças. Mobills Finanças Pessoais. 2021. Disponível em: <https://bit.ly/mobllsfinancas>. Acesso em: 15 oct. 2021.
+yarn start:dev
+
+Front-end:
+
+Executar yarn
+
+Executar  yarn start
+
+A aplicação será executada localmente
+
+
+### 6. Referências
+
+https://www.mobills.com.br/
