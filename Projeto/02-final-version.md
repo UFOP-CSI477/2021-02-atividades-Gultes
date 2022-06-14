@@ -20,18 +20,19 @@ Criação e Login de usuário (usando e-mail e senha);
 Autenticação da senha do usuário no login;
 
 Lançamento de Itens por Tipo: Receita, Despesa, Investimento;
+
 Edição, Exclusão e Pesquisa de itens;
 
-Exibição do Total (Receita - Despesa) na barra superior da tela, com atualização a cada lançamento;
+Exibição do Total (Receita - Despesa) na barra superior da tela, assim como o Total do Valor Investido, com atualização a cada lançamento;
 
 Persistência das informações lançadas pelo usuário logado após logar uma segunda vez. (SESSION_TOKEN)
   
 ### 2. Funcionalidades previstas e não implementadas
 
+
 ### 3. Outras funcionalidades implementadas
 
 Inclusão de exibição de foto do usuário durante o login.
-
 
 ### 4. Principais desafios e dificuldades
 
