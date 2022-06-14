@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Set interval</title>
+  </head>
+
+  <body>
+    <h1 class="text-center">Você esta na página por:</h1>
+    <p class="display-1 text-center"></p>
+    <script>
+      "use strict";
+      (function chronometer() {
+        const $display = document.querySelector(".display-1");
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+        setInterval(() => {
+          seconds++;
+          if (seconds === 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes === 60) {
+              minutes = 0;
+              hours++;
+            }
+          }
+          $display.innerHTML = `${hours} horas, ${minutes} minutos e ${seconds} segundos!`;
+        }, 1000);
+      })();
+    </script>
+  </body>
+</html>

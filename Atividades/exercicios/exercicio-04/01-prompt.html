@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt</title>
+  </head>
+  <body>
+    <div>
+      <p class="name"></p>
+      <p class="age"></p>
+      <p class="address"></p>
+    </div>
+    <button onclick="getInfos()">Pressione aqui para se registrar.</button>
+    <script>
+      "use strict";
+
+      function Pessoa(name, age, address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+      }
+
+      Pessoa.prototype.showInHTML = function () {
+        const names = ["Nome", "Idade", "Endereço"];
+        Object.entries(this).forEach(
+          ([key, value], index) =>
+            (document.querySelector(
+              `.${key}`
+            ).innerHTML = `${names[index]}: ${value}`)
+        );
+      };
+
+      const getInfos = () => {
+        const name = window.prompt("Digite aqui o seu nome.");
+        const age = window.prompt("Digite aqui o sua idade.");
+        const address = window.prompt("Digite  aqui o seu endereço.");
+        const pessoa = new Pessoa(name, age, address);
+        pessoa.showInHTML();
+      };
+    </script>
+  </body>
+</html>

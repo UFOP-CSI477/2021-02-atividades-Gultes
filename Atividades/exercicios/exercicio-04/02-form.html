@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <title>Form</title>
+  </head>
+
+  <body>
+    <form onsubmit="" class="container" name="frmDados">
+      <div class="mb-3">
+        <label class="form-label" for="name">Nome: </label>
+        <input class="form-control" type="text" name="name" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="age">Idade: </label>
+        <input class="form-control" type="number" name="age" />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="address">Endereço: </label>
+        <input class="form-control" type="text" name="address" />
+      </div>
+      <button
+        type="submit"
+        onclick="carregarDadosDoForm()"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+        class="btn btn-primary"
+      >
+        Submit
+      </button>
+    </form>
+    <script>
+      "use strict";
+
+      (function preventDefault() {
+        document.querySelector("form").onsubmit = (event) =>
+          event.preventDefault();
+      })();
+
+      (function preventDefault() {
+        document.querySelector("form").onsubmit = (event) =>
+          event.preventDefault();
+      })();
+
+      function Pessoa(name, age, address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+      }
+
+      Pessoa.prototype.showModal = function () {
+        const $div = document.createElement("div");
+        $div.classList.add(".container");
+        $div.innerHTML = `
+        
+            <p  class="display-1">Nome: ${this.name}</p>
+            <p  class="display-1">Idade: ${this.age}</p>
+            <p  class="display-1">Endereço: ${this.address}</p>
+       
+        `;
+        document.body.insertBefore(
+          $div,
+          document.querySelector("form").nextSibling
+        );
+      };
+
+      function carregarDadosDoForm() {
+        const name = document.frmDados.name.value;
+        const age = document.frmDados.age.value;
+        const address = document.frmDados.address.value;
+
+        const pessoa = new Pessoa(name, age, address);
+        pessoa.showModal();
+      }
+    </script>
+  </body>
+</html>
