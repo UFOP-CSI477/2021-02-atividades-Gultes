@@ -32,4 +32,4 @@ npx prisma migrate deploy
 
 yarn start:dev
 
-Obs: Por questões de tempo foi implementado apenas o back end, porém é possível testar as cruds via insomnia.
+Obs: Foi implementado apenas o back end, porém é possível testar as cruds via insomnia.
