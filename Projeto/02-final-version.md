@@ -42,15 +42,17 @@ Houve dificuldade em trabalhar com manipulação de datas de lançamento no Fron
 
 Back-end:
 
-Criar um banco de dados (PostgreSQL, e executar o comando yarn:
+Criar um banco de dados (PostgreSQL, e executar o comando yarn)
 
-Criar um arquivo `.env` na raiz da pasta "server-side" com a sua string de conexão e informações necessárias para conectar ao banco, tal como disposto em env.example:
+Acessar a pasta Projeto/server-side e criar um arquivo .env, tal qual .env.example, com a sua string de conexão e informações necessárias para conectar ao banco de dados.
 
-JWT_SECRET=
-DATABASE_URL=
-PORT=3333
+JWT_SECRET= examplexyxyxy DATABASE_URL= "example" PORT=3333
 
-Executar o camando:
+Executar os camandos:
+
+npx prisma generate
+
+npx prisma migrate deploy
 
 yarn start:dev
 
