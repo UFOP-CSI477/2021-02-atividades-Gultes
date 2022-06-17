@@ -48,7 +48,7 @@ Acessar a pasta Projeto/server-side e criar um arquivo .env, tal qual .env.examp
 
 JWT_SECRET= examplexyxyxy DATABASE_URL= "example" PORT=3333
 
-Executar os camandos:
+Executar os comandos:
 
 npx prisma generate
 
