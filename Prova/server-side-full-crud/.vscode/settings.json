@@ -1,0 +1,13 @@
+{
+  "conventionalCommits.scopes": [
+    "vscode",
+    "build",
+    "app",
+    "doc",
+    "deps",
+    "deploy",
+    "config",
+    "prisma",
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib"
+}

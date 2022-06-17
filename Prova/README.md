@@ -10,13 +10,15 @@
 ### Tecnologias utilizadas:
 
 Back-End: NestJS, Prisma, NodeJS
+
 BD: PostgreeSQL
+
 Teste do funcionamento das tabelas e CRUDS: Insomnia
 
 
-### Instruçõe para execução:
+### Instruções para execução:
 
-Back-end:
+Back-End:
 
 Criar um banco de dados (PostgreSQL, e executar o comando yarn)
 

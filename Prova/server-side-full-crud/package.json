@@ -1,0 +1,92 @@
+{
+  "name": "sistema-controle-alimentos-agasalho",
+  "version": "0.0.1",
+  "description": "",
+  "author": "Gustavo Estevam",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "nest build",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "start": "nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+    "test:e2e": "jest --config ./test/jest-e2e.json",
+    "deploy-production": "yarn build && rsync -aP ./dist/* ubuntu@132.226.251.6:/var/www/assessment-api && rsync -aP ./package.json ./yarn.lock ubuntu@132.226.251.6:/var/www/assessment-api && ssh ubuntu@132.226.251.6 'yarn --cwd /var/www/assessment-api && pm2 restart assessment-api'",
+    "typeorm": "ts-node -r tsconfig-paths/register ./node_modules/typeorm/cli.js"
+  },
+  "dependencies": {
+    "@nestjs/cli": "^8.2.5",
+    "@nestjs/common": "^8.4.4",
+    "@nestjs/config": "^2.0.0",
+    "@nestjs/core": "^8.4.4",
+    "@nestjs/event-emitter": "^1.1.1",
+    "@nestjs/jwt": "^8.0.1",
+    "@nestjs/passport": "^8.2.1",
+    "@nestjs/platform-express": "^8.4.4",
+    "@nestjs/schematics": "^8.0.11",
+    "@nestjs/swagger": "^5.2.1",
+    "@prisma/client": "^3.14.0",
+    "bcrypt": "^5.0.1",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.13.2",
+    "express": "^4.18.1",
+    "passport": "^0.6.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "reflect-metadata": "^0.1.13",
+    "rimraf": "^3.0.2",
+    "rxjs": "^7.5.5",
+    "swagger-ui-express": "^4.3.0"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^8.4.4",
+    "@types/bcrypt": "^5.0.0",
+    "@types/jest": "^27.5.0",
+    "@types/node": "^16.11.34",
+    "@types/passport": "^1.0.8",
+    "@types/passport-jwt": "^3.0.6",
+    "@types/passport-local": "^1.0.34",
+    "@types/supertest": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": "^5.23.0",
+    "@typescript-eslint/parser": "^5.23.0",
+    "eslint": "^8.15.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "prisma": "^3.14.0",
+    "supertest": "^6.2.3",
+    "ts-jest": "^27.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
